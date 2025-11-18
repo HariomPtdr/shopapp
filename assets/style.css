@@ -1,20 +1,20 @@
 /* assets/style.css
-   Premium Frosted-Glass UI — Neutral Gray/Black
+   Premium Frosted-Glass UI — Light Theme
    Single stylesheet for all pages
 */
 
 /* THEME VARIABLES (light/dark/premium available) */
 :root {
-  --glass-bg: rgba(22,24,28,0.62);
-  --glass-bg-soft: rgba(255,255,255,0.03);
-  --text: #eef2f7;
-  --muted: #9aa4b2;
-  --border: rgba(255,255,255,0.06);
+  --glass-bg: rgba(255,255,255,0.58);
+  --glass-bg-soft: rgba(0,0,0,0.02);
+  --text: #1a1d23;
+  --muted: #6b7280;
+  --border: rgba(0,0,0,0.06);
   --accent: linear-gradient(135deg,#8b5cf6,#6d28d9);
   --accent-solid: #6d28d9;
   --success: #16a34a;
   --radius: 16px;
-  --shadow: 0 14px 40px rgba(0,0,0,0.55);
+  --shadow: 0 14px 40px rgba(0,0,0,0.08);
   --container: 1080px;
   --glass-blur: blur(16px);
 }
@@ -23,9 +23,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
 html,body{height:100%}
 body{
-  background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.02), transparent),
-              radial-gradient(1000px 500px at 90% 90%, rgba(255,255,255,0.01), transparent),
-              linear-gradient(180deg,#0b0f14,#0f1419 60%);
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(0,0,0,0.01), transparent),
+              radial-gradient(1000px 500px at 90% 90%, rgba(0,0,0,0.01), transparent),
+              linear-gradient(180deg,#f9fafb,#e5e7eb 60%);
   color:var(--text);
   padding:36px 18px;
   -webkit-font-smoothing:antialiased;
@@ -38,7 +38,7 @@ body{
 .brand{display:flex;align-items:center;gap:14px}
 .brand-logo{
   width:60px;height:60px;border-radius:14px;
-  background: linear-gradient(135deg,#111827,#0b1220);
+  background: linear-gradient(135deg,#e5e7eb,#d1d5db);
   display:flex;align-items:center;justify-content:center;color:var(--accent-solid);font-weight:900;font-size:20px;
   box-shadow:var(--shadow);
 }
@@ -49,7 +49,7 @@ body{
 .header-right{display:flex;align-items:center;gap:12px}
 .avatar{
   width:46px;height:46px;border-radius:12px;
-  background:linear-gradient(135deg,#111827,#12151b);
+  background:linear-gradient(135deg,#e5e7eb,#d1d5db);
   display:flex;align-items:center;justify-content:center;color:var(--accent-solid);font-weight:800;
   border:1px solid var(--border);
 }
@@ -66,7 +66,7 @@ body{
 
 /* cards */
 .card{
-  background: rgba(10,12,14,0.56);
+  background: rgba(255,255,255,0.56);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding:20px;
@@ -75,7 +75,7 @@ body{
 }
 
 /* form elements */
-.input{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02);color:var(--text);margin-bottom:12px;font-size:15px}
+.input{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(0,0,0,0.02);color:var(--text);margin-bottom:12px;font-size:15px}
 .input::placeholder{color:var(--muted)}
 
 /* grid */
@@ -83,11 +83,11 @@ body{
 
 /* product card */
 .product-card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius:12px;border:1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+  border-radius:12px;border:1px solid rgba(0,0,0,0.04);
   padding:16px;display:flex;flex-direction:column;gap:12px;transition:transform .22s ease, box-shadow .22s ease;
 }
-.product-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.6);border-color:rgba(109,40,217,0.25)}
+.product-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.1);border-color:rgba(109,40,217,0.25)}
 .product-name{font-weight:800;font-size:16px}
 .product-desc{color:var(--muted);font-size:13px;min-height:42px}
 .product-meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
@@ -103,14 +103,14 @@ body{
 
 /* table layout */
 .table{width:100%;border-collapse:collapse;margin-top:12px}
-.table th,.table td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.table th,.table td{padding:12px;border-bottom:1px solid rgba(0,0,0,0.03);text-align:left}
 .table th{color:var(--accent-solid);font-weight:900}
 
 /* summary card */
-.summary{padding:14px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid var(--border)}
+.summary{padding:14px;border-radius:12px;background:rgba(0,0,0,0.02);border:1px solid var(--border)}
 
 /* invoice box */
-.invoice-box{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid var(--border)}
+.invoice-box{background:rgba(0,0,0,0.02);padding:18px;border-radius:12px;border:1px solid var(--border)}
 
 /* helpers */
 .small{color:var(--muted);font-size:13px}
