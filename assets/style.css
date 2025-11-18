@@ -1,0 +1,130 @@
+/* assets/style.css
+   Premium Frosted-Glass UI — Neutral Gray/Black
+   Single stylesheet for all pages
+*/
+
+/* THEME VARIABLES (light/dark/premium available) */
+:root {
+  --glass-bg: rgba(22,24,28,0.62);
+  --glass-bg-soft: rgba(255,255,255,0.03);
+  --text: #eef2f7;
+  --muted: #9aa4b2;
+  --border: rgba(255,255,255,0.06);
+  --accent: linear-gradient(135deg,#8b5cf6,#6d28d9);
+  --accent-solid: #6d28d9;
+  --success: #16a34a;
+  --radius: 16px;
+  --shadow: 0 14px 40px rgba(0,0,0,0.55);
+  --container: 1080px;
+  --glass-blur: blur(16px);
+}
+
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+html,body{height:100%}
+body{
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.02), transparent),
+              radial-gradient(1000px 500px at 90% 90%, rgba(255,255,255,0.01), transparent),
+              linear-gradient(180deg,#0b0f14,#0f1419 60%);
+  color:var(--text);
+  padding:36px 18px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* layout */
+.container{max-width:var(--container);margin:0 auto}
+.app-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-logo{
+  width:60px;height:60px;border-radius:14px;
+  background: linear-gradient(135deg,#111827,#0b1220);
+  display:flex;align-items:center;justify-content:center;color:var(--accent-solid);font-weight:900;font-size:20px;
+  box-shadow:var(--shadow);
+}
+.brand-title{font-size:22px;font-weight:800}
+.brand-sub{color:var(--muted);font-size:13px}
+
+/* header right */
+.header-right{display:flex;align-items:center;gap:12px}
+.avatar{
+  width:46px;height:46px;border-radius:12px;
+  background:linear-gradient(135deg,#111827,#12151b);
+  display:flex;align-items:center;justify-content:center;color:var(--accent-solid);font-weight:800;
+  border:1px solid var(--border);
+}
+
+/* buttons */
+.btn{padding:10px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{
+  background:var(--accent-solid);color:#fff;box-shadow:0 8px 26px rgba(109,40,217,0.18);
+}
+.btn-ghost{
+  background:transparent;border:1px solid var(--border);color:var(--text);
+}
+.btn-small{padding:8px 10px;font-size:13px;border-radius:10px}
+
+/* cards */
+.card{
+  background: rgba(10,12,14,0.56);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding:20px;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow);
+}
+
+/* form elements */
+.input{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02);color:var(--text);margin-bottom:12px;font-size:15px}
+.input::placeholder{color:var(--muted)}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+
+/* product card */
+.product-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;border:1px solid rgba(255,255,255,0.04);
+  padding:16px;display:flex;flex-direction:column;gap:12px;transition:transform .22s ease, box-shadow .22s ease;
+}
+.product-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,0.6);border-color:rgba(109,40,217,0.25)}
+.product-name{font-weight:800;font-size:16px}
+.product-desc{color:var(--muted);font-size:13px;min-height:42px}
+.product-meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.product-price{font-weight:900;color:var(--accent-solid);font-size:16px}
+
+/* actions bottom */
+.product-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto}
+.add-btn{
+  background:linear-gradient(90deg,#6d28d9,#8b5cf6);color:#fff;padding:10px 14px;border-radius:12px;border:none;font-weight:800;cursor:pointer;
+  box-shadow:0 10px 30px rgba(109,40,217,0.18);
+}
+.buy-btn{background:transparent;border:1px solid var(--border);padding:10px 12px;border-radius:12px;color:var(--text)}
+
+/* table layout */
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.table th{color:var(--accent-solid);font-weight:900}
+
+/* summary card */
+.summary{padding:14px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid var(--border)}
+
+/* invoice box */
+.invoice-box{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid var(--border)}
+
+/* helpers */
+.small{color:var(--muted);font-size:13px}
+.center{display:flex;align-items:center;justify-content:center}
+
+/* print rules */
+@media print {
+  body{background:#fff;color:#000;padding:0}
+  .no-print{display:none}
+  .card,.product-card,.invoice-box{box-shadow:none;border:none;background:#fff}
+}
+
+/* responsive tweaks */
+@media (max-width:720px){
+  .app-header{flex-direction:column;align-items:flex-start;gap:14px}
+  .grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+}
